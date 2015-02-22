@@ -129,6 +129,11 @@ void print_results(int a, int b, int option){
 }
 
 
+/*
+ *
+ * Acquired by paxdiablo on StackOverflow
+ * http://stackoverflow.com/questions/1694036/why-is-the-gets-function-dangerous-why-should-it-not-be-used
+ */
 static int getLine(char *prmpt, char *buff, size_t sz) {
 	int ch, extra;
 
