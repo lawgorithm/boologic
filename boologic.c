@@ -10,7 +10,8 @@ void print_options(void);
 void print_results(int, int, int);
 static int getLine();
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[])
+{
 
 	int a, b, option;
 	size_t sz = sizeof(char) * 3;
@@ -45,11 +46,7 @@ int main(int argc, char* argv[]){
 		option = atoi(hold);
 		free(hold);
 	}
-	else {
-
-		option = atoi(argv[3]);
-
-	}
+	else option = atoi(argv[3]);
 
 	print_results(a, b, option);
 
@@ -58,8 +55,8 @@ int main(int argc, char* argv[]){
 	return 0;
 }
 
-void print_options(){
-
+void print_options()
+{
 	printf("\n(1) < ");
 	printf("\n(2) > ");
 	printf("\n(3) == ");
@@ -67,11 +64,10 @@ void print_options(){
 	printf("\n(5) && ");
 	printf("\n(6) || ");
 	printf("\n");
-
 }
 
-void print_results(int a, int b, int option){
-
+void print_results(int a, int b, int option)
+{
 	char *op;
 	int result;
 	char* truthValue;
@@ -120,12 +116,10 @@ void print_results(int a, int b, int option){
 			break;
 	}
 
-	if (op != NULL){
+	if (op != NULL) {
 		truthValue = result != 0 ? "TRUE" : "FALSE";
 		printf("\n%d %s %d evaluates to %d (%s)\n", a, op, b, result, truthValue);
-
 	}
-
 }
 
 
@@ -134,7 +128,8 @@ void print_results(int a, int b, int option){
  * Acquired by paxdiablo on StackOverflow
  * http://stackoverflow.com/questions/1694036/why-is-the-gets-function-dangerous-why-should-it-not-be-used
  */
-static int getLine(char *prmpt, char *buff, size_t sz) {
+static int getLine(char *prmpt, char *buff, size_t sz)
+{
 	int ch, extra;
 
 	// Get line with buffer overrun protection.
